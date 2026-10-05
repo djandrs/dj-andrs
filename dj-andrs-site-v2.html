@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DJ ANDRS — Official YouTube Channel. New sounds, mixes, sets and energy.">
+<title>DJ ANDRS — Official Channel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#020204;
+  --text:#f7f7f7;
+  --muted:#999;
+  --line:rgba(255,255,255,.14);
+  --glass:rgba(255,255,255,.055);
+  --glass2:rgba(255,255,255,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,Arial,sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(255,255,255,.10),transparent 34%),
+    radial-gradient(circle at 10% 60%,rgba(255,255,255,.035),transparent 28%),
+    radial-gradient(circle at 90% 30%,rgba(255,255,255,.035),transparent 30%),
+    #020204;
+}
+#stars,#stars2{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{
+  position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;
+  opacity:.35;animation:twinkle 3s ease-in-out infinite;
+}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.8;transform:scale(1.5)}}
+.cursor-glow{
+  position:fixed;width:260px;height:260px;border-radius:50%;
+  pointer-events:none;z-index:20;mix-blend-mode:screen;
+  background:radial-gradient(circle,rgba(255,255,255,.09),transparent 68%);
+  transform:translate(-50%,-50%);
+}
+.nav{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);
+  width:min(940px,calc(100% - 28px));z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 12px 10px 16px;border:1px solid var(--line);
+  background:rgba(8,8,10,.58);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border-radius:999px;box-shadow:0 15px 60px rgba(0,0,0,.35);
+}
+.brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:2px;color:#fff!important;text-decoration:none}.brand:visited,.brand:hover,.brand:active{color:#fff!important}
+.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.navlinks{display:flex;gap:5px}
+.navlinks a,.nav-cta{
+  color:#ddd;text-decoration:none;font-size:11px;font-weight:600;
+  padding:10px 13px;border-radius:999px;transition:.3s ease;
+}
+.navlinks a:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav-cta{background:#fff;color:#050505!important}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,255,255,.18)}
+section{width:min(1120px,calc(100% - 36px));margin:auto}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:130px 0 80px;position:relative;
+}
+.hero-orbit{
+  position:absolute;width:min(760px,90vw);height:min(760px,90vw);
+  border:1px solid rgba(255,255,255,.08);border-radius:50%;
+  box-shadow:0 0 100px rgba(255,255,255,.035) inset;
+  animation:orbit 18s linear infinite;
+}
+.hero-orbit:after{
+  content:"";position:absolute;top:5%;left:50%;width:5px;height:5px;
+  border-radius:50%;background:#fff;box-shadow:0 0 20px #fff;
+}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.hero-content{position:relative;z-index:2;animation:heroIn 1.2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(35px) scale(.97);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+.eyebrow{font-size:11px;letter-spacing:4px;color:#aaa;font-weight:700}
+.hero h1{font-size:clamp(64px,13vw,154px);line-height:.82;letter-spacing:-.085em;margin:24px 0 26px;font-weight:900}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+.hero p{max-width:570px;margin:auto;color:#aaa;font-size:15px;line-height:1.7}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{
+  position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;
+  padding:15px 21px;border-radius:999px;text-decoration:none;font-size:11px;
+  letter-spacing:1px;font-weight:800;transition:.35s ease;
+}
+.btn:before{
+  content:"";position:absolute;inset:-40%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.55),transparent 60%);
+  transform:translateX(-100%) rotate(8deg);transition:.7s ease;
+}
+.btn:hover:before{transform:translateX(100%) rotate(8deg)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 14px 45px rgba(255,255,255,.13)}
+.btn span{position:relative}
+.primary{background:#fff;color:#050505}
+.ghost{border:1px solid var(--line);background:var(--glass);color:#fff;backdrop-filter:blur(16px)}
+.scrollhint{position:absolute;bottom:28px;font-size:9px;letter-spacing:3px;color:#666;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(7px);opacity:.45}}
+
+.reveal{opacity:0;transform:translateY(45px);filter:blur(6px);transition:1s cubic-bezier(.2,.75,.2,1)}
+.reveal.visible{opacity:1;transform:none;filter:none}
+.section{padding:120px 0}
+.kicker{font-size:10px;letter-spacing:3px;color:#777;font-weight:800}
+h2{font-size:clamp(38px,7vw,72px);letter-spacing:-.06em;line-height:.95;margin:13px 0 22px}
+.lead{color:#999;max-width:600px;line-height:1.7;font-size:15px}
+.glass-card{
+  border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
+  border-radius:30px;box-shadow:0 30px 100px rgba(0,0,0,.35);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+}
+.release{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:45px}
+.release-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:45px}
+.release-card{overflow:hidden;transition:.45s ease}
+.release-card:hover{transform:translateY(-7px);box-shadow:0 30px 90px rgba(0,0,0,.48);border-color:rgba(255,255,255,.24)}
+.release-video{aspect-ratio:16/9;background:#000;overflow:hidden}
+.release-video iframe{width:100%;height:100%;border:0;display:block}
+.release-card-info{padding:24px 26px 27px}
+.release-card-info>div:first-child{display:flex;align-items:center;gap:9px}
+.release-number{font-size:10px;letter-spacing:2px;font-weight:800;color:#fff}
+.release-status{font-size:8px;letter-spacing:2px;color:#777;border:1px solid rgba(255,255,255,.12);padding:5px 8px;border-radius:999px}
+.release-card-info h3{font-size:26px;letter-spacing:-.04em;margin:15px 0 7px}
+.release-card-info p{margin:0 0 18px;color:#777;font-size:12px;line-height:1.6}
+.release-link{color:#fff;text-decoration:none;font-size:9px;letter-spacing:1.5px;font-weight:800;transition:.3s ease}
+.release-link:hover{opacity:.6}
+.all-releases{margin-top:16px;padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.all-releases h3{font-size:25px;letter-spacing:-.04em;margin:10px 0 7px}
+.all-releases p{margin:0;color:#777;font-size:12px;line-height:1.6;max-width:600px}
+
+.video-wrap{padding:10px;overflow:hidden}
+.video{aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#000}
+.video iframe{width:100%;height:100%;border:0}
+.release-info{padding:42px;display:flex;flex-direction:column;justify-content:center}
+.release-info .tag{font-size:10px;letter-spacing:3px;color:#999;font-weight:800}
+.release-info h3{font-size:38px;letter-spacing:-.05em;margin:14px 0}
+.release-info p{color:#999;line-height:1.7;font-size:14px}
+.trackline{height:1px;background:linear-gradient(90deg,#fff,transparent);margin:25px 0}
+.stats{display:flex;gap:28px}
+.stat b{font-size:22px}.stat small{display:block;color:#777;margin-top:4px;font-size:9px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.mini{padding:28px;min-height:180px;transition:.4s ease}
+.mini:hover{transform:translateY(-8px);background:var(--glass2);box-shadow:0 20px 55px rgba(0,0,0,.35)}
+.mini .icon{font-size:24px;margin-bottom:35px}.mini h3{margin:0 0 9px;font-size:17px}.mini p{margin:0;color:#777;font-size:12px;line-height:1.6}
+.banner{
+  min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:70px 30px;position:relative;overflow:hidden;
+}
+.banner:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.045);filter:blur(45px)}
+.banner-content{position:relative}.banner h2{font-size:clamp(45px,8vw,90px);margin-bottom:28px}
+footer{border-top:1px solid rgba(255,255,255,.08);padding:35px 0 50px;color:#666;font-size:10px;letter-spacing:1px}
+.footer-row{display:flex;justify-content:space-between;gap:20px}
+footer a{color:#999}
+@media(max-width:760px){
+ .navlinks{display:none}.nav{padding:9px 9px 9px 12px}
+ .release-grid,.grid{grid-template-columns:1fr}.release-info{padding:30px}.all-releases{flex-direction:column;align-items:flex-start}
+ .section{padding:85px 0}.hero{padding-top:110px}
+ .footer-row{flex-direction:column}.stats{gap:18px}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div><div id="stars2"></div><div class="cursor-glow"></div>
+
+<nav class="nav">
+  <a class="brand" href="#top"><img src="https://yt3.googleusercontent.com/zUeE5PIDav7oSJE2exrA1xESKXsVfqt4BoL3Awf5nFAsJyKisw6gRoIbw4NWOTRFIc9g6zw3=s160-c-k-c0x00ffffff-no-rj" alt="DJ ANDRS">DJ ANDRS</a>
+  <div class="navlinks">
+    <a href="#release">Release</a><a href="#universe">Universe</a><a href="#channel">Channel</a>
+  </div>
+  <a class="nav-cta" href="https://www.youtube.com/@djandrs" target="_blank">YOUTUBE ↗</a>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-orbit"></div>
+  <div class="hero-content">
+    <div class="eyebrow">OFFICIAL YOUTUBE CHANNEL · TRANSMISSION 001</div>
+    <h1>DJ<br><span>ANDRS</span></h1>
+    <p>Enter the frequency. Discover new sounds, releases, mixes and sets from DJ ANDRS.</p>
+    <div class="actions">
+      <a class="btn primary" href="#release"><span>▶ LISTEN TO THE NEW RELEASE</span></a>
+      <a class="btn ghost" href="https://www.youtube.com/@djandrs?sub_confirmation=1" target="_blank"><span>＋ SUBSCRIBE</span></a>
+    </div>
+  </div>
+  <div class="scrollhint">SCROLL TO ENTER THE UNIVERSE ↓</div>
+</section>
+
+<section id="release" class="section reveal">
+  <div class="kicker">01 / RELEASES</div>
+  <h2>NEW<br>ENERGY.</h2>
+  <p class="lead">Retrouve une sélection des releases de DJ ANDRS directement ici. Pour découvrir toutes les autres sorties, explore la chaîne YouTube.</p>
+
+  <div class="release-grid">
+
+    <article class="glass-card release-card">
+      <div class="release-video">
+        <iframe src="https://www.youtube.com/embed/1BoYdEbMs-E?si=3QnYx1zjbQ0BTJID"
+          title="DJ ANDRS — Release 01"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="release-card-info">
+        <div>
+          <span class="release-number">01</span>
+          <span class="release-status">OUT NOW</span>
+        </div>
+        <h3>DJ ANDRS</h3>
+        <p>Écoute la release et entre dans la fréquence.</p>
+        <a class="release-link" href="https://www.youtube.com/watch?v=1BoYdEbMs-E" target="_blank" rel="noopener">WATCH ON YOUTUBE ↗</a>
+      </div>
+    </article>
+
+    <article class="glass-card release-card">
+      <div class="release-video">
+        <iframe src="https://www.youtube.com/embed/dpPtQdFEDcI?si=KYPlQfvryEjWuDEU"
+          title="DJ ANDRS — Release 02"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="release-card-info">
+        <div>
+          <span class="release-number">02</span>
+          <span class="release-status">OUT NOW</span>
+        </div>
+        <h3>DJ ANDRS</h3>
+        <p>Une autre transmission sonore de DJ ANDRS.</p>
+        <a class="release-link" href="https://www.youtube.com/watch?v=dpPtQdFEDcI" target="_blank" rel="noopener">WATCH ON YOUTUBE ↗</a>
+      </div>
+    </article>
+
+    <article class="glass-card release-card">
+      <div class="release-video">
+        <iframe src="https://www.youtube.com/embed/n71aGRJbv0M?si=NmXpbMlcKLvd8TIM"
+          title="DJ ANDRS — Release 03"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="release-card-info">
+        <div>
+          <span class="release-number">03</span>
+          <span class="release-status">OUT NOW</span>
+        </div>
+        <h3>DJ ANDRS</h3>
+        <p>Une nouvelle vibe à découvrir directement depuis la chaîne.</p>
+        <a class="release-link" href="https://www.youtube.com/watch?v=n71aGRJbv0M" target="_blank" rel="noopener">WATCH ON YOUTUBE ↗</a>
+      </div>
+    </article>
+
+    <article class="glass-card release-card">
+      <div class="release-video">
+        <iframe src="https://www.youtube.com/embed/3gGpNorseNo?si=YEUIAe2dDZ7c8yZJ"
+          title="DJ ANDRS — Release 04"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="release-card-info">
+        <div>
+          <span class="release-number">04</span>
+          <span class="release-status">OUT NOW</span>
+        </div>
+        <h3>DJ ANDRS</h3>
+        <p>Encore une transmission, encore une fréquence.</p>
+        <a class="release-link" href="https://www.youtube.com/watch?v=3gGpNorseNo" target="_blank" rel="noopener">WATCH ON YOUTUBE ↗</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="all-releases glass-card">
+    <div>
+      <span class="kicker">MORE TRANSMISSIONS</span>
+      <h3>Il y en a encore.</h3>
+      <p>Découvre toutes les autres musiques, vidéos et prochaines releases directement sur la chaîne DJ ANDRS.</p>
+    </div>
+    <a class="btn primary" href="https://www.youtube.com/@djandrs" target="_blank" rel="noopener"><span>SEE ALL ON YOUTUBE ↗</span></a>
+  </div>
+</section>
+
+<section id="universe" class="section reveal">
+  <div class="kicker">02 / THE UNIVERSE</div>
+  <h2>MORE THAN<br>A CHANNEL.</h2>
+  <p class="lead">Un espace dédié aux sons, aux sets et à l'énergie DJ ANDRS. Explore les différentes fréquences.</p>
+  <div class="grid">
+    <article class="glass-card mini"><div class="icon">◉</div><h3>RELEASES</h3><p>Les nouveaux sons et sorties de DJ ANDRS, directement depuis la chaîne.</p></article>
+    <article class="glass-card mini"><div class="icon">◌</div><h3>MIXES & SETS</h3><p>Des sélections et sessions pour entrer dans l'univers sonore DJ ANDRS.</p></article>
+    <article class="glass-card mini"><div class="icon">✦</div><h3>NEW VIBES</h3><p>De nouvelles transmissions, vidéos et expériences à chaque nouvelle release.</p></article>
+  </div>
+</section>
+
+<section id="channel" class="section reveal">
+  <div class="glass-card banner">
+    <div class="banner-content">
+      <div class="kicker">03 / THE CHANNEL</div>
+      <h2>READY TO<br>ENTER?</h2>
+      <p class="lead" style="margin:0 auto">Rejoins DJ ANDRS sur YouTube et ne rate aucune nouvelle transmission.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.youtube.com/@djandrs" target="_blank"><span>VISIT CHANNEL ↗</span></a>
+        <a class="btn ghost" href="https://www.youtube.com/@djandrs?sub_confirmation=1" target="_blank"><span>SUBSCRIBE ＋</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+<section>
+  <div class="footer-row">
+    <div>DJ ANDRS · OFFICIAL CHANNEL</div>
+    <div><a href="https://www.youtube.com/@djandrs" target="_blank">YOUTUBE</a> · <a href="#top">BACK TO TOP ↑</a></div>
+  </div>
+</section>
+</footer>
+
+<script>
+const stars=document.getElementById('stars'), stars2=document.getElementById('stars2');
+for(let i=0;i<150;i++){
+  const s=document.createElement('i');s.className='star';
+  s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+  s.style.opacity=(.15+Math.random()*.55);
+  s.style.animationDelay=(Math.random()*4)+'s';
+  s.style.transform=`scale(${.5+Math.random()*1.5})`;
+  (i%2?stars:stars2).appendChild(s);
+}
+const glow=document.querySelector('.cursor-glow');
+window.addEventListener('pointermove',e=>{
+  glow.animate({left:e.clientX+'px',top:e.clientY+'px'},{duration:500,fill:'forwards'});
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+window.addEventListener('scroll',()=>{
+  document.documentElement.style.setProperty('--scroll',window.scrollY);
+});
+</script>
+</body>
+</html>
